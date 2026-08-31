@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DualTech | DualBot</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="src/scripts/app.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32">
+                        <path d="M16 2 28 9v14L16 30 4 23V9z" fill="none" stroke="currentColor" stroke-width="2" />
+                        <path d="M16 2v28M16 2 4 9l12 7 12-7z" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </span>
+
+            <a class="navbar-brand" href="#">
+                dual<span>tech</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DualBot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tecnologia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Aplicações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+                    <button class="btn btn-outline-primary btnHeader" type="submit">Fale Conosco</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="heroContainer">
+            <div class="leftMain">
+                <span>dualbot</span>
+                <h1 class="titleHero">Tecnologia em dupla.
+                    Proteção em qualquer lugar.</h1>
+                <p>O DualBot é a união de um robô terrestre e um drone inteligente para inspeções e monitoramento em áreas perigosas, de difícil acesso ou inalcançáveis.</p>
+                <a href="#">Conheça o projeto <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+            <div class="rightMain">
+                <img class="droneAnimate" src="src/assets/images/drone-removebg-preview.png" alt="Drone DualBot">
+                <img class="carAnimate" src="src/assets/images/carroDualbot-removebg-preview.png" alt="Carro DualBot">
+            </div>
+        </div>
+    </main>
+
+    <section class="drone">
+        <div class="containerDrone">
+            <div class="leftDrone"> <img src="src/assets/images/drone-removebg-preview.png" alt=""></div>
+            <div class="rightDrone">
+                <span>drone</span>
+                <h1>Visão aérea, alcance ilimitado.</h1>
+                <p>Projetado para alcançar áreas elevadas ou confinadas, o drone do DualBot capta imagens e dados em alta resolução com estabilidade e precisão.</p>
+                <div class="cardsInfo">
+                    <div>
+                        <i class="bi bi-camera"></i>
+                        <span>Câmera 4K Estabilizada</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-wifi"></i>
+                        <span>Transmissão em tempo real</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-leaf"></i>
+                        <span>Sensores Ambientais</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-shield-check"></i>
+                        <span>Voo Inteligente e Seguro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carro">
+        <div class="carContainer">
+            <div class="leftCar">
+                <img src="src/assets/images/carroDualTech-removebg-preview.png" alt="">
+            </div>
+            <div class="rightCar">
+                <span>carro terrestre</span>
+                <h1>Robustez para terrenos desafiadores.</h1>
+                <p>O robô terrestre foi desenvolvido para navegar por ambientes irregulares, escombros e locais de difícil acesso, coletando dados com precisão e segurança.</p>
+                <div class="cardsInfo">
+                    <div>
+                        <i class="bi bi-camera"></i>
+                        <span>Tração 4x4 Off-road</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-camera"></i>
+                        <span>Câmeras</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-leaf"></i>
+                        <span>Sensores de Gases e Temperatura</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-shield-check"></i>
+                        <span>Autonomia Estendida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech">
+        <div class="techContainer">
+            <div class="techLeft">
+                <span>Detecção Inteligente</span>
+                <h1>Inteligência Artificial que identifica o que importa.</h1>
+                <p>Com YOLO e Python, o DualBot detecta rachaduras, vazamentos, corrosão e muito mais, oferecendo análises rápidas e assertivas.</p>
+                <div class="infosTech">
+                    <span><i class="bi bi-check2"></i> YOLO em Python</span>
+                    <span><i class="bi bi-check2"></i> Alta precisão na detecção</span>
+                    <span><i class="bi bi-check2"></i> Análises em tempo real</span>
+                    <span><i class="bi bi-check2"></i> Relatórios e alertas automáticos</span>
+                </div>
+                <a class="techButton" href="#">Ver tecnologia <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+            <div class="techRight">
+                <img src="src/assets/images/rachaduras.jfif" alt="">
+                <div class="code-panel">
+          <div class="code-titlebar"><span></span><span></span><span></span><em>modelo.py</em></div>
+          <pre class="code-body"><span class="ln">1</span><span class="kw">import</span> cv2
+<span class="ln">2</span><span class="kw">from</span> ultralytics <span class="kw">import</span> YOLO
+<span class="ln">3</span>
+<span class="ln">4</span>modelo = <span class="fn">YOLO</span>(<span class="str">'best.pt'</span>)
+<span class="ln">5</span>resultados = modelo(<span class="str">'parede.jpg'</span>)
+<span class="ln">6</span>
+<span class="ln">7</span><span class="kw">for</span> r <span class="kw">in</span> resultados:
+<span class="ln">8</span>    caixas = r.boxes
+<span class="ln">9</span>    r.plot()
+<span class="ln">10</span>
+<span class="ln">11</span>    cv2.imshow(<span class="str">'Detecção'</span>, r.plot()[0])
+<span class="ln">12</span>    cv2.waitKey(0)</pre>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why">
+    <div class="wrap">
+      <h2 class="center">Por que escolher o DualBot?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <i class="bi bi-shield-check"></i>
+          <h3>Segurança</h3>
+          <p>Reduz a exposição humana a ambientes perigosos.</p>
+        </div>
+        <div class="why-card">
+          <i class="bi bi-lightning-charge"></i>
+          <h3>Eficiência</h3>
+          <p>Inspeções mais rápidas, precisas e econômicas.</p>
+        </div>
+        <div class="why-card">
+          <i class="bi bi-puzzle"></i>
+          <h3>Integração</h3>
+          <p>Drone e robô trabalhando em perfeita sinergia.</p>
+        </div>
+        <div class="why-card">
+          <i class="bi bi-activity"></i>
+          <h3>Escalabilidade</h3>
+          <p>Solução adaptável a diferentes tipos de operação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aplicacoes">
+    <div class="appContainer">
+        <div class="appTop">
+            <div>
+                <span>aplicações</span>
+                <p>O DualBot é ideal para diversos setores que exigem inspeções em ambientes críticos ou de difícil acesso.</p>
+            </div>
+            <a href="#">Ver todas as aplicações <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+        <div class="appBottom">
+            <div>
+                <i class="bi bi-exclamation-octagon"></i>
+                <span>Indústria</span>
+                <p>Inspeção de tubulações, caldeiras, tanques e estruturas críticas.</p>
+            </div>
+            <div>
+                <i class="bi bi-exclamation-octagon"></i>
+                <span>Mineração</span>
+                <p>Monitoramento de áreas de risco, barragens e escavações.</p>
+            </div>
+            <div>
+                <i class="bi bi-exclamation-octagon"></i>
+                <span>Construção Civil</span>
+                <p>Análise de estruturas, pontes, viadutos e edificações.</p>
+            </div>
+            <div>
+                <i class="bi bi-exclamation-octagon"></i>
+                <span>Energia</span>
+                <p>Linhas de transmissão, aerogeradores e painéis solares.</p>
+            </div>
+            <div>
+                <i class="bi bi-exclamation-octagon"></i>
+                <span>Ambientes Perigosos</span>
+                <p>Locais com gases tóxicos, altas temperaturas ou instabilidade.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <section class="cta" id="contato">
+    <div class="ctaContainer">
+      <div class="cta-copy">
+        <h2 >Pronto para levar suas inspeções ao próximo nível?</h2>
+        <p >Fale com a DualTech e descubra como o DualBot pode transformar a forma como você inspeciona, monitora e protege.</p>
+        <a href="#" >Fale com um especialista <span >→</span></a>
+      </div>
+      <div class="cta-art" >
+        <img src="src/assets/images/carroDualTech-removebg-preview.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="brand brand--footer">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 2 28 9v14L16 30 4 23V9z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 2v28M16 2 4 9l12 7 12-7z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="brand-name">DUAL<b>TECH</b></span>
+      </a>
+      <p>Tecnologia em dupla para um mundo mais seguro e eficiente.</p>
+    </div>
+    <nav class="footer-col" aria-label="Navegação">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tecnologia">Tecnologia</a></li>
+        <li><a href="#aplicacoes">Aplicações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="#">Documentação</a></li>
+        <li><a href="#">Suporte</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="#">contato@dualtech.com.br</a></li>
+        <li><a href="#">(98) 99999-9999</a></li>
+      </ul>
+      <div class="socials">
+        <a href="#" aria-label="E-mail da DualTech"><i class="bi bi-envelope"></i></a>
+        <a href="#" aria-label="Instagram da DualTech"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Telefone da DualTech"><i class="bi bi-telephone"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 DualTech. Todos os direitos reservados.</p>
+  </div>
+</footer>
+</body>
+
+</html>
