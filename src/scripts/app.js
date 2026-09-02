@@ -1,4 +1,3 @@
-
 /* Main */
 gsap.registerPlugin(ScrollTrigger);
 
@@ -171,22 +170,23 @@ techTimeline
 
 gsap.registerPlugin(ScrollTrigger);
 
-const card = gsap.utils.toArray(".why-card");
+const whyCards = gsap.utils.toArray(".why-card");
 
 const timel = gsap.timeline({
     scrollTrigger: {
-        trigger: ".why",
+        trigger: ".why-grid",
         start: "top top",
-        end: "+=1800",
+        end: "+=1400",
         scrub: 1,
         pin: true,
         anticipatePin: 1
     }
 });
 
-card.forEach((card, index) => {
+whyCards.forEach((card, index) => {
 
-    if (index === cards.length - 1) return;
+    // mantém o último card sempre visível para não deixar a tela vazia
+    if (index === whyCards.length - 1) return;
 
     timel.to(card, {
         y: -220,
@@ -196,4 +196,73 @@ card.forEach((card, index) => {
         ease: "power2.inOut"
     });
 
-}); 
+});
+
+/* Aplicações */
+gsap.registerPlugin(ScrollTrigger);
+
+const appTopTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".appTop",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});
+
+appTopTimeline
+    .from(".appTop span", {
+        y: 25,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power3.out"
+    })
+    .from(".appTop p", {
+        y: 25,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out"
+    }, "-=0.35")
+    .from(".appTop > a", {
+        opacity: 0,
+        y: 15,
+        duration: 0.6,
+        ease: "power3.out"
+    }, "-=0.35");
+
+/* Contato / CTA */
+gsap.registerPlugin(ScrollTrigger);
+
+const ctaTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".cta",
+        start: "top 75%",
+        toggleActions: "play none none none"
+    }
+});
+
+ctaTimeline
+    .from(".cta-copy h2", {
+        y: 40,
+        opacity: 0,
+        duration: 0.9,
+        ease: "power3.out"
+    })
+    .from(".cta-copy p", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+    }, "-=0.5")
+    .from(".cta-copy a", {
+        y: 20,
+        opacity: 1,
+        duration: 0.7,
+        ease: "power3.out"
+    }, "-=0.45")
+    .from(".cta-art img", {
+        x: 60,
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out"
+    }, "-=0.7");

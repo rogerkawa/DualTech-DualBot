@@ -16,7 +16,7 @@ body{
   color: var(--ink);
   background: var(--white);
   -webkit-font-smoothing: antialiased;
-  line-height: 1.55;
+  line-height: 1.55; 
 }
 a{
   text-decoration: none !important;
@@ -129,7 +129,7 @@ main{
   font-size: 1.2rem;
 }
 .leftMain a{
-  width: 15vw;
+  width: clamp(160px, 15vw, 220px);
   text-align: center;
   padding: 0.8rem;
   background-color: var(--blue) !important;
@@ -154,7 +154,7 @@ main{
  .drone {
     width: 100%;
     background-color: var(--bg-soft);
-    min-height: 72vh;
+    min-height: clamp(420px, 55vh, 640px);
 }
 
 .containerDrone {
@@ -176,7 +176,7 @@ main{
 }
 
 .rightDrone {
-    width: 40%;
+    width: fit-content;
 }
 .rightDrone{
   display: flex;
@@ -246,7 +246,7 @@ main{
 .carContainer{
   width: 100%;
   max-width: 1200px;
-  min-height: 72vh;
+  min-height: clamp(420px, 55vh, 640px);
   margin: 0 auto;
   display: flex;
   padding: 3rem 1rem;
@@ -371,7 +371,7 @@ main{
 }
 .techRight{
   display: flex;
-  width: 85vw;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -741,13 +741,53 @@ main{
   color: #77839f;
 }
 
-/* =========================================================
-   RESPONSIVIDADE
-   ========================================================= */
+.techLeft > span,
+.rightCar > span,
+.rightDrone > span,
+.appTop div span {
+    width: fit-content !important;
+}
+.leftMain,
+.rightMain{
+    flex: 1 !important;
+}
 
-/* =========================
-   TABLET / NOTEBOOK
-   ========================= */
+/* 
+   RESPONSIVIDADE
+    */
+
+/* TABLET / NOTEBOOK */
+   @media (min-width: 1800px){
+
+    .heroContainer,
+    .containerDrone,
+    .carContainer,
+    .techContainer,
+    .appContainer,
+    .ctaContainer,
+    .wrap{
+        max-width: 1500px;
+    }
+
+    .leftMain h1,
+    .rightDrone h1,
+    .rightCar h1,
+    .techLeft h1{
+        font-size: 4rem;
+    }
+
+    .leftMain p,
+    .rightDrone p,
+    .rightCar p,
+    .techLeft p{
+        font-size: 1.3rem;
+    }
+}
+@media (min-width: 1600px) {
+  .heroContainer, .containerDrone, .carContainer, .techContainer, .wrap {
+    max-width: 1320px; 
+  }
+}
 
 @media (max-width: 1100px) {
 
@@ -822,9 +862,9 @@ main{
     }
 
 
-    /* =========================
+    /* 
        TECNOLOGIA
-       ========================= */
+ */
 
     .techContainer {
         padding: 4rem 2rem;
@@ -839,6 +879,9 @@ main{
     .techLeft h1 {
         font-size: 2.5rem;
     }
+    .techLeft a{
+      width: 50%;
+    }
 
     .techRight > img,
     .code-panel {
@@ -846,9 +889,9 @@ main{
     }
 
 
-    /* =========================
+    /* 
        WHY
-       ========================= */
+      */
 
     .why {
         padding: 80px 2rem;
@@ -859,9 +902,9 @@ main{
     }
 
 
-    /* =========================
+    /* 
        APLICAÇÕES
-       ========================= */
+       */
 
     .appContainer {
         padding: 4rem 2rem;
@@ -880,9 +923,9 @@ main{
     }
 
 
-    /* =========================
+    /*
        CTA
-       ========================= */
+  */
 
     .ctaContainer {
         padding: 4rem 2rem;
@@ -903,9 +946,9 @@ main{
     }
 
 
-    /* =========================
+    /* 
        FOOTER
-       ========================= */
+      */
 
     .site-footer {
         padding-left: 2rem;
@@ -922,15 +965,15 @@ main{
 }
 
 
-/* =========================================================
+/* 
    MOBILE
-   ========================================================= */
+  */
 
 @media (max-width: 767px) {
 
-    /* =========================
+    /*
        GLOBAL
-       ========================= */
+*/
 
     body {
         overflow-x: hidden;
@@ -942,9 +985,9 @@ main{
     }
 
 
-    /* =========================
+    /*
        NAVBAR
-       ========================= */
+ */
 
     .navbar {
         padding: 0.7rem 1rem;
@@ -1036,9 +1079,7 @@ main{
     }
 
 
-    /* =========================
-       IMAGENS DO HERO
-       ========================= */
+    /* IMAGENS DO HERO */
 
     .droneAnimate {
         width: 190px;
@@ -1062,9 +1103,9 @@ main{
     }
 
 
-    /* =====================================================
+    /*
        DRONE
-       ===================================================== */
+  */
 
     .drone {
         min-height: auto;
@@ -1140,9 +1181,9 @@ main{
     }
 
 
-    /* =====================================================
+    /* 
        CARRO
-       ===================================================== */
+  */
 
     .carContainer {
 
@@ -1196,9 +1237,9 @@ main{
     }
 
 
-    /* =====================================================
+    /* 
        TECNOLOGIA / DETECÇÃO
-       ===================================================== */
+*/
 
     .techContainer {
 
@@ -1255,7 +1296,7 @@ main{
         width: fit-content;
         min-width: 170px;
 
-        padding: 0.8rem 1.2rem;
+        padding: 0.8rem 2rem;
 
         white-space: nowrap;
     }
